@@ -1,5 +1,6 @@
 {
   "icon": "calendar",
   "color": "blue",
-  "tooltip": "Create Google Event"
+  "tooltip": "Create Google Event",
+  "field_type": "datetime"
 }
