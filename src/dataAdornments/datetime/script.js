@@ -41,12 +41,11 @@ const buildEventName = (record, object, fieldId) => {
     (field) => field.name === "display_name"
   )?.value;
 
-  recordName =
-    !recordName && recordFields.length
-      ? `${recordFields.find((field) => field.name === "first_name")?.value} ${
-          recordFields.find((field) => field.name === "last_name")?.value
-        }`
-      : recordName;
+  if (!recordName && recordFields.length) {
+    recordName = `${
+      recordFields.find((field) => field.name === "first_name")?.value
+    } ${recordFields.find((field) => field.name === "last_name")?.value}`;
+  }
 
   if (!recordName && !fieldName && !object.object_name && !object.name) {
     return "";
@@ -61,8 +60,6 @@ const buildEventName = (record, object, fieldId) => {
   return `${object.object_name || object.name || ""}${
     recordName ? "+-+" + recordName : ""
   }${fieldName ? "+-+" + fieldName : ""}`;
-
-  return result;
 };
 
 const getAppBaseUrl = () => {
