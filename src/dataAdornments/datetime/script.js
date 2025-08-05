@@ -68,7 +68,7 @@ const getAppBaseUrl = () => {
   } else if (this.applicationPath.includes("staging")) {
     return "https://v2.staging.kizen.com";
   } else if (this.applicationPath.includes("go")) {
-    return "https://go.kizen.com ";
+    return "https://go.kizen.com";
   }
   return "https://fmo.kizen.com";
 };
