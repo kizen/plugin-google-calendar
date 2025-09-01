@@ -53,9 +53,10 @@ const buildEventName = (record, object, fieldId) => {
 
   if (record.activityId) {
     const recordNameResult = (recordName || record.display_name || "").replace(
-      /[^a-zA-Z0-9 ]/g,
+      /[^a-zA-Z0-9 _-]/g,
       ""
     );
+    console.log({ recordNameResult });
     return `${object.object_name || object.name}+Activity${
       recordNameResult ? "+-+" + recordNameResult : ""
     }`;
