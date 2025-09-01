@@ -52,7 +52,10 @@ const buildEventName = (record, object, fieldId) => {
   }
 
   if (record.activityId) {
-    const recordNameResult = recordName || record.display_name || "";
+    const recordNameResult = (recordName || record.display_name || "").replace(
+      /#/g,
+      ""
+    );
     return `${object.object_name || object.name}+Activity${
       recordNameResult ? "+-+" + recordNameResult : ""
     }`;
@@ -74,6 +77,8 @@ const getAppBaseUrl = () => {
 };
 
 const buildEventDetails = (record, object, activityId) => {
+  this.preserve = true;
+  console.log({ record, object, activityId });
   const baseUrl = getAppBaseUrl();
   if (!object.id || !baseUrl) {
     return "";
