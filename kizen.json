@@ -1,6 +1,6 @@
 {
   "name": "Google Calendar",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "api_name": "google_calendar",
   "description": "Create Events in Google Calendar for Date and Date Time fields",
   "release_branches": ["bugfix/KZN-14323-readd-date-time-adornments"],
