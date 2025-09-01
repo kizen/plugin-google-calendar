@@ -60,7 +60,6 @@ const buildEventName = (record, object, fieldId) => {
       /[^a-zA-Z0-9 _-]/g,
       ""
     );
-    console.log({ recordNameResult });
     return `${objectNameResult}+Activity${
       recordNameResult ? "+-+" + recordNameResult : ""
     }`;
@@ -88,10 +87,7 @@ const getAppBaseUrl = () => {
 };
 
 const buildEventDetails = (record, object, activityId) => {
-  this.preserve = true;
-  console.log({ record, object, activityId });
   const baseUrl = getAppBaseUrl();
-  console.log({ baseUrl });
   if (!object.id || !baseUrl) {
     return "";
   } else if (
@@ -188,11 +184,8 @@ if (this.args.activityId) {
 
 const isAllDayEvent = this.args.fieldType === "date";
 const dateRange = toGoogleCalendarTimeRange(this.args.value, isAllDayEvent);
-console.log({ dateRange });
 const eventName = buildEventName(record, object, this.args.fieldId);
-console.log({ eventName });
 const eventDetails = buildEventDetails(record, object, this.args.activityId);
-console.log({ eventDetails });
 
 this.openWindow(
   `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventName}&details=${eventDetails}&dates=${dateRange}&ctz=${this.currentBusiness.timezone.name}`
