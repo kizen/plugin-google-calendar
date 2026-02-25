@@ -2,5 +2,6 @@
   "icon": "calendar",
   "color": "blue",
   "tooltip": "Create Google Event",
-  "field_type": "datetime"
+  "field_type": "datetime",
+  "when": "Boolean({{config.enable_adornment}})"
 }

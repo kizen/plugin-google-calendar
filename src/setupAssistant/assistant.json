@@ -1,0 +1,10 @@
+{
+  "fields": [
+    {
+      "type": "boolean",
+      "label": "Enable \"Add to Google Calendar\" Data Adornment",
+      "key": "enable_adornment",
+      "default": true
+    }
+  ]
+}
