@@ -28,11 +28,13 @@
     },
     {
       "type": "description",
+      "key": "allCalendarsDescription",
       "content": "All calendars you are authorized to access will be available in the plugin.",
       "when": "Boolean({{enableAllCalendars}}) && Boolean({{enableExternalCalendars}})"
     },
     {
       "type": "description",
+      "key": "selectCalendarsDescription",
       "content": "Select specific calendars to enable in the plugin.",
       "when": "!Boolean({{enableAllCalendars}}) && Boolean({{enableExternalCalendars}})"
     },
