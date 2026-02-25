@@ -23,7 +23,9 @@
       "type": "select",
       "label": "Enabled Calendars",
       "key": "enabledBusinessCalendars",
-      "required": false
+      "required": false,
+      "allow_multiple": true,
+      "when": "Boolean({{enableExternalCalendars}})"
     }
   ]
 }
