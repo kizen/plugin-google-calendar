@@ -1,4 +1,4 @@
-const allCalendarsEnabled = this.config.enableAllCalendars;
+const allCalendarsEnabled = this.config.enableAllCalendars ?? true; // Default to true
 const calendarFilterList =
   this.config.enabledBusinessCalendars?.map((calendar) => calendar.value) || [];
 

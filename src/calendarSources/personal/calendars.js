@@ -1,6 +1,6 @@
+const allCalendarsEnabled = this.userConfig.enableAllCalendars ?? true; // Default to true
 const calendarFilterList =
-  this.userConfig.enabledPersonalCalendars?.map((calendar) => calendar.value) ||
-  [];
+  this.userConfig.enabledUserCalendars?.map((calendar) => calendar.value) || [];
 
 const [data, errors] = await this.getWithErrors(
   this.getServiceUrl("personal", "/calendar/v3/users/me/calendarList"),
@@ -18,6 +18,10 @@ return data.items
     default: calendar.primary || false,
   }))
   .filter((calendar) => {
+    if (allCalendarsEnabled) {
+      return true;
+    }
+
     if (calendarFilterList.includes(calendar.id)) {
       return true;
     }
