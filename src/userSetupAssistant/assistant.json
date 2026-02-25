@@ -8,30 +8,11 @@
   ],
   "fields": [
     {
-      "type": "boolean",
-      "label": "Enable External Calendars",
-      "key": "enableExternalCalendars",
-      "default": true
-    },
-    {
-      "type": "boolean",
-      "label": "Enable All Calendars",
-      "key": "enableAllCalendars",
-      "default": true,
-      "when": "{{enableExternalCalendars}} !== false"
-    },
-    {
-      "type": "description",
-      "content": "When all calendars are enabled, users will be able to view events from all of your authorized calendars.",
-      "key": "enabledWarning"
-    },
-    {
       "type": "select",
       "label": "Enabled Calendars",
       "key": "enabledPersonalCalendars",
       "required": false,
-      "allow_multiple": true,
-      "when": "{{enableExternalCalendars}} !== false && !{{enableAllCalendars}}"
+      "allow_multiple": true
     }
   ]
 }

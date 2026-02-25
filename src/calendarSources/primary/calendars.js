@@ -1,5 +1,3 @@
-const shouldFilter = !this.config.enableAllCalendars;
-
 const calendarFilterList =
   this.config.enabledBusinessCalendars?.map((calendar) => calendar.value) || [];
 
@@ -21,11 +19,7 @@ return data.items
     };
   })
   .filter((calendar) => {
-    if (!shouldFilter) {
-      return true;
-    }
-
-    if (shouldFilter && calendarFilterList.includes(calendar.id)) {
+    if (calendarFilterList.includes(calendar.id)) {
       return true;
     }
 

@@ -1,5 +1,3 @@
-const shouldFilter = !this.userConfig.enableAllCalendars;
-
 const calendarFilterList =
   this.userConfig.enabledPersonalCalendars?.map((calendar) => calendar.value) ||
   [];
@@ -20,11 +18,7 @@ return data.items
     default: calendar.primary || false,
   }))
   .filter((calendar) => {
-    if (!shouldFilter) {
-      return true;
-    }
-
-    if (shouldFilter && calendarFilterList.includes(calendar.id)) {
+    if (calendarFilterList.includes(calendar.id)) {
       return true;
     }
 
