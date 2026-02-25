@@ -31,7 +31,7 @@
       "key": "enabledPersonalCalendars",
       "required": false,
       "allow_multiple": true,
-      "when": "{{enableExternalCalendars}} !== false && {{enableAllCalendars}} !== true"
+      "when": "{{enableExternalCalendars}} !== false && !{{enableAllCalendars}}"
     }
   ]
 }
