@@ -1,7 +1,10 @@
 ({ state }) => {
-  const data = state.result;
+  const data = state.result?.data?.items || [];
 
-  console.log(JSON.stringify(data)); // For debugging purposes, to see the structure of the data returned from the API.
-
-  return [];
+  return data.map((calendar) => {
+    return {
+      label: calendar.summary,
+      value: calendar.id,
+    };
+  });
 };

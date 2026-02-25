@@ -1,3 +1,5 @@
+console.log(JSON.stringify(this.config), JSON.stringify(this.args));
+
 const [data, errors] = await this.getWithErrors(
   this.getServiceUrl("primary", "/calendar/v3/users/me/calendarList"),
 );
