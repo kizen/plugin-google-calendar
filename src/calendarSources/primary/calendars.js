@@ -1,7 +1,7 @@
-const enabledCalendars = this.config.enabledBusinessCalendars;
-const shouldFilter = Array.isArray(enabledCalendars);
+const shouldFilter = !this.config.enableAllCalendars;
+
 const calendarFilterList =
-  enabledCalendars?.map((calendar) => calendar.value) || [];
+  this.config.enabledBusinessCalendars?.map((calendar) => calendar.value) || [];
 
 const [data, errors] = await this.getWithErrors(
   this.getServiceUrl("primary", "/calendar/v3/users/me/calendarList"),

@@ -20,12 +20,24 @@
       "default": true
     },
     {
+      "type": "boolean",
+      "label": "Enable All Calendars",
+      "key": "enableAllCalendars",
+      "default": true,
+      "when": "{{enableExternalCalendars}} !== false"
+    },
+    {
+      "type": "description",
+      "content": "When all calendars are enabled, users will be able to view events from all of your authorized calendars.",
+      "key": "enabledWarning"
+    },
+    {
       "type": "select",
       "label": "Enabled Calendars",
       "key": "enabledBusinessCalendars",
       "required": false,
       "allow_multiple": true,
-      "when": "Boolean({{enableExternalCalendars}})"
+      "when": "{{enableExternalCalendars}} !== false && {{enableAllCalendars}} !== true"
     }
   ]
 }
