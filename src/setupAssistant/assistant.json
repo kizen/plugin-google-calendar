@@ -1,16 +1,29 @@
 {
+  "services": [
+    {
+      "api_name": "primary",
+      "required": true,
+      "prerequisite": true
+    }
+  ],
   "fields": [
     {
       "type": "boolean",
       "label": "Enable Data Adornment",
-      "key": "enable_adornment",
+      "key": "enableAdornments",
       "default": true
     },
     {
       "type": "boolean",
       "label": "Enable External Calendars",
-      "key": "enable_external_calendars",
+      "key": "enableExternalCalendars",
       "default": true
+    },
+    {
+      "type": "select",
+      "label": "Enabled Calendars",
+      "key": "enabledBusinessCalendars",
+      "required": false
     }
   ]
 }

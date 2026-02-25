@@ -1,5 +1,5 @@
 {
   "name": "Google Calendar - Personal",
   "api_name": "personal",
-  "when": "Boolean({{config.enable_external_calendars}})"
+  "when": "Boolean({{config.enableExternalCalendars}})"
 }
