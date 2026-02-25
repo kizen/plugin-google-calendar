@@ -1,3 +1,4 @@
+const allCalendarsEnabled = this.config.enableAllCalendars;
 const calendarFilterList =
   this.config.enabledBusinessCalendars?.map((calendar) => calendar.value) || [];
 
@@ -19,6 +20,10 @@ return data.items
     };
   })
   .filter((calendar) => {
+    if (allCalendarsEnabled) {
+      return true;
+    }
+
     if (calendarFilterList.includes(calendar.id)) {
       return true;
     }
