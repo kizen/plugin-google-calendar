@@ -14,11 +14,18 @@
       "default": true
     },
     {
+      "type": "boolean",
+      "label": "Enable External Calendars",
+      "key": "enableExternalCalendars",
+      "default": true
+    },
+    {
       "type": "select",
       "label": "Enabled Calendars",
       "key": "enabledBusinessCalendars",
       "required": false,
-      "allow_multiple": true
+      "allow_multiple": true,
+      "when": "Boolean({{enableExternalCalendars}})"
     }
   ]
 }
