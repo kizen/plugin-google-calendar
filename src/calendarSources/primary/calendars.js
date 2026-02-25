@@ -10,5 +10,5 @@ return data.items.map((calendar) => ({
   id: calendar.id,
   description: calendar.description,
   name: calendar.summary,
-  default: calendar.primary || false,
+  default: false,
 }));

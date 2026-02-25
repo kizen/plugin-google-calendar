@@ -1,5 +1,5 @@
 {
-  "name": "Google Calendar",
+  "name": "Google Calendar - Business",
   "api_name": "primary",
   "when": "Boolean({{config.enable_external_calendars}})"
 }
