@@ -2,8 +2,14 @@
   "fields": [
     {
       "type": "boolean",
-      "label": "Enable \"Add to Google Calendar\" Data Adornment",
+      "label": "Enable Data Adornment",
       "key": "enable_adornment",
+      "default": true
+    },
+    {
+      "type": "boolean",
+      "label": "Enable External Calendars",
+      "key": "enable_external_calendars",
       "default": true
     }
   ]

@@ -1,0 +1,5 @@
+{
+  "name": "Google Calendar",
+  "api_name": "primary",
+  "when": "Boolean({{config.enable_external_calendars}})"
+}
