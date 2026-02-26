@@ -2,7 +2,7 @@
   "services": [
     {
       "api_name": "primary",
-      "required": true,
+      "required": false,
       "prerequisite": true
     }
   ],
@@ -15,7 +15,7 @@
     },
     {
       "type": "boolean",
-      "label": "Enable External Calendars",
+      "label": "Enable External Business Calendars",
       "key": "enableExternalCalendars",
       "default": true
     },
