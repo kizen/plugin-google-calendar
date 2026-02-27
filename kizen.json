@@ -1,6 +1,6 @@
 {
   "name": "Google Calendar",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "api_name": "google_calendar",
   "description": "Create Events in Google Calendar for Date and Date Time fields",
   "release_branches": ["main"],
@@ -18,30 +18,6 @@
   },
   "services": [
     {
-      "service_name": "primary",
-      "display_name": "Google Calendar",
-      "auth_type": "oauth",
-      "auth_level": "business",
-      "required_entitlement": null,
-      "base_service_url": "https://www.googleapis.com",
-      "auth_credentials": {
-        "client_id": "388275267821-mdbsnig5hnou8fdnvgh45t1qg89k2qv2.apps.googleusercontent.com",
-        "client_secret": "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",
-        "scopes": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/calendar",
-        "authorize_url": "https://accounts.google.com/o/oauth2/v2/auth",
-        "token_url": "https://oauth2.googleapis.com/token",
-        "content_type": "application/x-www-form-urlencoded",
-        "token_field_name": "access_token",
-        "default_token_expiry": 3600,
-        "authorize_params": {
-          "access_type": "offline",
-          "prompt": "consent"
-        },
-        "success_redirect_path": "/oauth/success",
-        "error_redirect_path": "/oauth/error"
-      }
-    },
-    {
       "service_name": "personal",
       "display_name": "Google Calendar",
       "auth_type": "oauth",
@@ -49,8 +25,8 @@
       "required_entitlement": null,
       "base_service_url": "https://www.googleapis.com",
       "auth_credentials": {
-        "client_id": "388275267821-mdbsnig5hnou8fdnvgh45t1qg89k2qv2.apps.googleusercontent.com",
-        "client_secret": "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",
+        "client_id": "923833033654-mfnldc4u5vvpd7plucp37vubecktcs5v.apps.googleusercontent.com",
+        "client_secret": "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",
         "scopes": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/calendar",
         "authorize_url": "https://accounts.google.com/o/oauth2/v2/auth",
         "token_url": "https://oauth2.googleapis.com/token",

@@ -1,11 +1,5 @@
 {
-  "services": [
-    {
-      "api_name": "primary",
-      "required": false,
-      "prerequisite": true
-    }
-  ],
+  "services": [],
   "fields": [
     {
       "type": "boolean",
@@ -15,36 +9,9 @@
     },
     {
       "type": "boolean",
-      "label": "Enable External Business Calendars",
+      "label": "Enable External Calendars",
       "key": "enableExternalCalendars",
       "default": true
-    },
-    {
-      "type": "boolean",
-      "label": "Enable All Calendars",
-      "key": "enableAllCalendars",
-      "default": true,
-      "when": "Boolean({{enableExternalCalendars}})"
-    },
-    {
-      "type": "description",
-      "key": "allCalendarsDescription",
-      "content": "All calendars you are authorized to access will be available in the plugin.",
-      "when": "Boolean({{enableAllCalendars}}) && Boolean({{enableExternalCalendars}})"
-    },
-    {
-      "type": "description",
-      "key": "selectCalendarsDescription",
-      "content": "Select specific calendars to enable in the plugin.",
-      "when": "!Boolean({{enableAllCalendars}}) && Boolean({{enableExternalCalendars}})"
-    },
-    {
-      "type": "select",
-      "label": "Enabled Calendars",
-      "key": "enabledBusinessCalendars",
-      "required": false,
-      "allow_multiple": true,
-      "when": "Boolean({{enableExternalCalendars}}) && !Boolean({{enableAllCalendars}})"
     }
   ]
 }
