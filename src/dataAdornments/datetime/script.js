@@ -52,14 +52,27 @@ const buildEventName = (record, object, fieldId) => {
   }
 
   if (record.activityId) {
-    const recordNameResult = recordName || record.display_name || "";
-    return `${object.object_name || object.name}+Activity${
+    const recordNameResult = (recordName || record.display_name || "").replace(
+      /[^a-zA-Z0-9 _-]/g,
+      ""
+    );
+    const objectNameResult = (object.object_name || object.name || "").replace(
+      /[^a-zA-Z0-9 _-]/g,
+      ""
+    );
+    return `${objectNameResult}+Activity${
       recordNameResult ? "+-+" + recordNameResult : ""
     }`;
   }
-  return `${object.object_name || object.name || ""}${
-    recordName ? "+-+" + recordName : ""
-  }${fieldName ? "+-+" + fieldName : ""}`;
+  const objectNameResult = (object.object_name || object.name || "").replace(
+    /[^a-zA-Z0-9 _-]/g,
+    ""
+  );
+  const recordNameResult = (recordName || "").replace(/[^a-zA-Z0-9 _-]/g, "");
+  const fieldNameResult = (fieldName || "").replace(/[^a-zA-Z0-9 _-]/g, "");
+  return `${objectNameResult}${
+    recordNameResult ? "+-+" + recordNameResult : ""
+  }${fieldNameResult ? "+-+" + fieldNameResult : ""}`;
 };
 
 const getAppBaseUrl = () => {
