@@ -4,7 +4,11 @@ const calendarFilterList =
 
 const [data, errors] = await this.getWithErrors(
   this.getServiceUrl("personal", "/calendar/v3/users/me/calendarList"),
+  
 );
+
+this.preserve = true;
+console.log({ errors, data });
 
 if (errors) {
   return [];
