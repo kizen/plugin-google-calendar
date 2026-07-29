@@ -1,6 +1,6 @@
 {
   "name": "Google Calendar",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "api_name": "google_calendar",
   "description": "Create Events in Google Calendar for Date and Date Time fields",
   "release_branches": ["main"],
@@ -26,7 +26,10 @@
       "base_service_url": "https://www.googleapis.com",
       "auth_credentials": {
         "client_id": "923833033654-mfnldc4u5vvpd7plucp37vubecktcs5v.apps.googleusercontent.com",
-        "client_secret": "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",
+        "client_secret": {
+          "encrypted": true,
+          "value": "eyJ2IjoxLCJhbGciOiJSU0EtT0FFUC0yNTYrQTI1NkdDTSIsImsiOiJ6MCs3bFZZalFsYmlvdHVDeTFUM1RHY29XdXlPbkE2Y3RzZHZwSnhqRUxaN2x5NFNoTEduOTdUcSs4Y25SSGZ2cVpxbmRoUTl3M1hvZkxSQXk2aTFoT2doVC9mby9aOC9ZZlNOZ0lieG9pb0tlTGhkSFJyQU9PV3ZHcVNQVXoxeXdYelRuUVhJQW4xc3ZGMzdwWXpDTTR1d0VxMlVNN3FtS0xYdEdoV0RpTGNYa1Y3d1hCM2M2V3BVek5OV0Z2b1RaaHZTR2svWW9xZTF1Yy8zTjVLUjRUdFgxUjlIbS8yV2VDR3hXMGFxcEhrRHFSUVNLL2V3S2cyenV2OEhJYTJKOUxZd2pwcENaOEY4NlExQk5zRTE2ak1yM2w5NURaL1I0V0VLNVF6Q1ZoMnUzVXRXY1FzRUsvQ2ZCTWFTRC9qWDFNM0NrZCtTekg0dG5yaTRWU3pWNDFpS3NMTm50bE5CZnFDNExERFh4ZHcrZkVOa3FLaTdsdlZ4VFJwZ0RGSkhIWkFRZ0tOazhmaW5CMWNVcDNvNEZMaVNuQ2ZzckprWlNVS2EwZmxkVytIZGZydDhXT21xUExFazNEOFo4Z3BsSnJmajRzcE9McUg4b1QwclN6bjAzTTA5bDE1YVByRk84MFdjNkk0bVY4TFBielY4UGdVT3FEMUQ4MEtRVGo0MiIsIml2IjoiK091M2pscERpakt5TG5lTiIsInRhZyI6IjBUdVdWTUdKZ1MwS3QzaUtOSkRObEE9PSIsImN0IjoibXV6RUdURWNJc2JJTGlvUmNONWVodDZRTWVsTlNyeDhJSnE1SzBJUG40NFFhWTg9In0="
+        },
         "scopes": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.calendars.readonly https://www.googleapis.com/auth/calendar.events.readonly https://www.googleapis.com/auth/calendar.events.public.readonly",
         "authorize_url": "https://accounts.google.com/o/oauth2/v2/auth",
         "token_url": "https://oauth2.googleapis.com/token",
